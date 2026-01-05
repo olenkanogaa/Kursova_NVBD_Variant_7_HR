@@ -1,11 +1,11 @@
--- Створення бази даних PersonnelAccountingDW
+-- Г‘ГІГўГ®Г°ГҐГ­Г­Гї ГЎГ Г§ГЁ Г¤Г Г­ГЁГµ PersonnelAccountingDW
 CREATE DATABASE PersonnelAccountingDW;
 GO
 
 USE PersonnelAccountingDW;
 GO
 
--- Таблиця вимірів для працівників
+-- Г’Г ГЎГ«ГЁГ¶Гї ГўГЁГ¬ВіГ°ВіГў Г¤Г«Гї ГЇГ°Г Г¶ВіГўГ­ГЁГЄВіГў
 CREATE TABLE Dim_Employee (
     employee_id INT IDENTITY(1,1) PRIMARY KEY,
     full_name VARCHAR(155),
@@ -17,7 +17,7 @@ CREATE TABLE Dim_Employee (
 	employee_key INT NOT NULL
 );
 
--- Таблиця вимірів для відділів
+-- Г’Г ГЎГ«ГЁГ¶Гї ГўГЁГ¬ВіГ°ВіГў Г¤Г«Гї ГўВіГ¤Г¤ВіГ«ВіГў
 CREATE TABLE Dim_Department (
     department_id INT IDENTITY(1,1) PRIMARY KEY,
     name VARCHAR(50),
@@ -26,7 +26,7 @@ CREATE TABLE Dim_Department (
 	department_key INT NOT NULL
 );
 
--- Таблиця вимірів для посад
+-- Г’Г ГЎГ«ГЁГ¶Гї ГўГЁГ¬ВіГ°ВіГў Г¤Г«Гї ГЇГ®Г±Г Г¤
 CREATE TABLE Dim_Position (
     position_id INT IDENTITY(1,1) PRIMARY KEY,
     name VARCHAR(50),
@@ -43,7 +43,7 @@ CREATE TABLE Dim_Date (
     day INT NULL
 );
 
--- Таблиця фактів для аналізу
+-- Г’Г ГЎГ«ГЁГ¶Гї ГґГ ГЄГІВіГў Г¤Г«Гї Г Г­Г Г«ВіГ§Гі
 CREATE TABLE Fact_Personnel (
     fact_id INT IDENTITY(1,1) PRIMARY KEY,
     employee_id INT,
