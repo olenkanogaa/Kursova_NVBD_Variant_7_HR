@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Accounting Report Project", "Accounting Report Project\Accounting Report Project.rptproj", "{85105773-51BA-44FB-9CF5-49E7E7AB61D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85105773-51BA-44FB-9CF5-49E7E7AB61D2}.Debug|Default.ActiveCfg = Debug
+		{85105773-51BA-44FB-9CF5-49E7E7AB61D2}.Debug|Default.Build.0 = Debug
+		{85105773-51BA-44FB-9CF5-49E7E7AB61D2}.Debug|Default.Deploy.0 = Debug
+		{85105773-51BA-44FB-9CF5-49E7E7AB61D2}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{85105773-51BA-44FB-9CF5-49E7E7AB61D2}.DebugLocal|Default.Build.0 = DebugLocal
+		{85105773-51BA-44FB-9CF5-49E7E7AB61D2}.Release|Default.ActiveCfg = Release
+		{85105773-51BA-44FB-9CF5-49E7E7AB61D2}.Release|Default.Build.0 = Release
+		{85105773-51BA-44FB-9CF5-49E7E7AB61D2}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05877BA0-EA41-4008-BA5E-0DA1049B6788}
+	EndGlobalSection
+EndGlobal
