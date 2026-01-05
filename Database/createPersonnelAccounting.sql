@@ -1,11 +1,11 @@
--- Створення бази даних PersonnelAccounting
+-- Г‘ГІГўГ®Г°ГҐГ­Г­Гї ГЎГ Г§ГЁ Г¤Г Г­ГЁГµ PersonnelAccounting
 CREATE DATABASE PersonnelAccounting;
 GO
 
 USE PersonnelAccounting;
 GO
 
--- Таблиця для паспортних даних
+-- Г’Г ГЎГ«ГЁГ¶Гї Г¤Г«Гї ГЇГ Г±ГЇГ®Г°ГІГ­ГЁГµ Г¤Г Г­ГЁГµ
 CREATE TABLE data_Passport (
     id INT IDENTITY(1,1) PRIMARY KEY,
     father_name VARCHAR(50) NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE data_Passport (
     place_of_birth VARCHAR(50) NOT NULL
 );
 
--- Таблиця для відділів
+-- Г’Г ГЎГ«ГЁГ¶Гї Г¤Г«Гї ГўВіГ¤Г¤ВіГ«ВіГў
 CREATE TABLE Departments (
     id INT IDENTITY(1,1) PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE Departments (
     manager_name VARCHAR(50) NOT NULL
 );
 
--- Таблиця для посад
+-- Г’Г ГЎГ«ГЁГ¶Гї Г¤Г«Гї ГЇГ®Г±Г Г¤
 CREATE TABLE Positions (
     id INT IDENTITY(1,1) PRIMARY KEY,
     name VARCHAR(32) NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE Positions (
     rate DECIMAL(10,2) NOT NULL
 );
 
--- Таблиця для працівників
+-- Г’Г ГЎГ«ГЁГ¶Гї Г¤Г«Гї ГЇГ°Г Г¶ВіГўГ­ГЁГЄВіГў
 CREATE TABLE Employees (
     id INT IDENTITY(1,1) PRIMARY KEY,
     id_passport INT NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE Employees (
     FOREIGN KEY (id_passport) REFERENCES data_Passport(id)
 );
 
--- Таблиця для історії посад
+-- Г’Г ГЎГ«ГЁГ¶Гї Г¤Г«Гї ВіГ±ГІГ®Г°ВіВї ГЇГ®Г±Г Г¤
 CREATE TABLE History_Position (
     id INT IDENTITY(1,1) PRIMARY KEY,
     id_empoyee INT NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE History_Position (
     FOREIGN KEY (id_position) REFERENCES Positions(id)
 );
 
--- Таблиця для відпусток
+-- Г’Г ГЎГ«ГЁГ¶Гї Г¤Г«Гї ГўВіГ¤ГЇГіГ±ГІГ®ГЄ
 CREATE TABLE Holidays (
     id INT IDENTITY(1,1) PRIMARY KEY,
     id_employee INT NOT NULL,
