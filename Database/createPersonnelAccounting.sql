@@ -1,11 +1,11 @@
--- Ñòâîðåííÿ áàçè äàíèõ PersonnelAccounting
+--  PersonnelAccounting
 CREATE DATABASE PersonnelAccounting;
 GO
 
 USE PersonnelAccounting;
 GO
 
--- Òàáëèöÿ äëÿ ïàñïîðòíèõ äàíèõ
+-- 
 CREATE TABLE data_Passport (
     id INT IDENTITY(1,1) PRIMARY KEY,
     father_name VARCHAR(50) NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE data_Passport (
     place_of_birth VARCHAR(50) NOT NULL
 );
 
--- Òàáëèöÿ äëÿ â³ää³ë³â
+-- 
 CREATE TABLE Departments (
     id INT IDENTITY(1,1) PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE Departments (
     manager_name VARCHAR(50) NOT NULL
 );
 
--- Òàáëèöÿ äëÿ ïîñàä
+--
 CREATE TABLE Positions (
     id INT IDENTITY(1,1) PRIMARY KEY,
     name VARCHAR(32) NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE Positions (
     rate DECIMAL(10,2) NOT NULL
 );
 
--- Òàáëèöÿ äëÿ ïðàö³âíèê³â
+-- 
 CREATE TABLE Employees (
     id INT IDENTITY(1,1) PRIMARY KEY,
     id_passport INT NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE Employees (
     FOREIGN KEY (id_passport) REFERENCES data_Passport(id)
 );
 
--- Òàáëèöÿ äëÿ ³ñòîð³¿ ïîñàä
+-- 
 CREATE TABLE History_Position (
     id INT IDENTITY(1,1) PRIMARY KEY,
     id_empoyee INT NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE History_Position (
     FOREIGN KEY (id_position) REFERENCES Positions(id)
 );
 
--- Òàáëèöÿ äëÿ â³äïóñòîê
+-- 
 CREATE TABLE Holidays (
     id INT IDENTITY(1,1) PRIMARY KEY,
     id_employee INT NOT NULL,
@@ -65,3 +65,4 @@ CREATE TABLE Holidays (
     FOREIGN KEY (id_employee) REFERENCES Employees(id)
 );
 GO
+
