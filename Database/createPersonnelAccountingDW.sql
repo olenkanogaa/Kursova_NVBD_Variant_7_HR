@@ -1,11 +1,11 @@
--- Ñòâîðåííÿ áàçè äàíèõ PersonnelAccountingDW
+-- 
 CREATE DATABASE PersonnelAccountingDW;
 GO
 
 USE PersonnelAccountingDW;
 GO
 
--- Òàáëèöÿ âèì³ð³â äëÿ ïðàö³âíèê³â
+-- 
 CREATE TABLE Dim_Employee (
     employee_id INT IDENTITY(1,1) PRIMARY KEY,
     full_name VARCHAR(155),
@@ -17,7 +17,7 @@ CREATE TABLE Dim_Employee (
 	employee_key INT NOT NULL
 );
 
--- Òàáëèöÿ âèì³ð³â äëÿ â³ää³ë³â
+-- 
 CREATE TABLE Dim_Department (
     department_id INT IDENTITY(1,1) PRIMARY KEY,
     name VARCHAR(50),
@@ -26,7 +26,7 @@ CREATE TABLE Dim_Department (
 	department_key INT NOT NULL
 );
 
--- Òàáëèöÿ âèì³ð³â äëÿ ïîñàä
+-- 
 CREATE TABLE Dim_Position (
     position_id INT IDENTITY(1,1) PRIMARY KEY,
     name VARCHAR(50),
@@ -43,7 +43,7 @@ CREATE TABLE Dim_Date (
     day INT NULL
 );
 
--- Òàáëèöÿ ôàêò³â äëÿ àíàë³çó
+-- 
 CREATE TABLE Fact_Personnel (
     fact_id INT IDENTITY(1,1) PRIMARY KEY,
     employee_id INT,
@@ -64,3 +64,4 @@ CREATE TABLE Fact_Personnel (
     FOREIGN KEY (position_id) REFERENCES Dim_Position(position_id)
 );
 GO
+
