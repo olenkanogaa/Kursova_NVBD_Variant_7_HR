@@ -12,26 +12,26 @@
 
 Викладач: Любінський Б.Б. 
 
- Опис проєкту
+ Опис проєкту:
  
 Метою роботи є розробка повнофункціональної системи керування надвеликою базою даних для автоматизації процесів відділу кадрів. Проект включає реалізацію OLTP-системи, розробку ETL-процесів, побудову OLAP-куба для аналітики та створення інтерактивних звітів.
 
 
 Предметна область: Облік працівників, відділів, посад, відпусток та історії кадрових змін.
 
- Технологічний стек
+ Технологічний стек:
 
 DBMS: Microsoft SQL Server 
 
 
 ETL: SQL Server Integration Services (SSIS) 
 
-Analytics: SQL Server Analysis Services (SSAS) — Multidimensional Mode 
+Analytics: SQL Server Analysis Services (SSAS) 
 
 
 Reporting: SQL Server Reporting Services (SSRS) 
 
-Data Generation: [Вказати інструмент, напр. Python/SQL Script/Redgate] 
+Data Generation
 
  Структура репозиторію
 Згідно з вимогами до курсової роботи, проєкт організовано наступним чином:
@@ -54,7 +54,7 @@ Data Generation: [Вказати інструмент, напр. Python/SQL Scri
 
 /Documentation — пояснювальна записка у форматі PDF.
 
- Основні показники бази даних
+ Основні показники бази даних:
 
 Кількість працівників: > 10 000 записів.
 
